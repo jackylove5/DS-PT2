@@ -13,10 +13,10 @@ It is envisaged that this collaboration will investigate the leveraging of Artif
 
 ## Architecture
 ![Architecture](https://github.com/jackylove5/DS-PT2/blob/main/doc/pipeline.png?raw=true)
-WebCrawler is responsible for searching articles based on given keywords and getting the download links.
-Downloader is responsible for downloading the articles locally.
-Extractor is responsible for extracting tables from articles.
-TableProcessor is responsible for tables merging and model building.
+- WebCrawler is responsible for searching articles based on given keywords and getting the download links.
+- Downloader is responsible for downloading the articles locally.
+- Extractor is responsible for extracting tables from articles.
+- TableProcessor is responsible for tables merging and model building.
 
 
 ## Requirement
