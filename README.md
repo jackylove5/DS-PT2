@@ -18,7 +18,7 @@ It is envisaged that this collaboration will investigate the leveraging of Artif
 - Requests and BeautifulSoup
 - FuzzyWuzzy
 - Pdf2image
-- [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.2/ppstructure/README.md)
+- [PaddleOCR 2.1.1](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.2/ppstructure/README.md)
 - [TPOT](https://github.com/EpistasisLab/tpot)
 
 ## Usage
