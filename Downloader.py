@@ -11,26 +11,7 @@ import wget
 from selenium import webdriver
 import pandas as pd
 import time
-'''
-def download_pdf(link_df):
-    print("downloading pdfs ...")
-    os.makedirs('./pdf/',exist_ok=True) #create dir to store files
-    dlpath = ('./pdf/')
-    for i in range(len(link_df)):
-        try:
-            d_link = link_df.iloc[i,1]
-            file_name = dlpath + link_df.iloc[i,0] + ".pdf"
-            urlretrieve(d_link, file_name)
-        except:
-            try:
-                d_link = link_df.iloc[i,1]
-                file_name = dlpath + link_df.iloc[i,0] + ".pdf"
-                
-                wget.download(d_link, file_name)
-            except:
-                continue
-'''
-#link_df = pd.read_csv("download_link.csv")
+
 #getting download links using webdriver
 def download_pdf():
     link_df = pd.read_csv("download_link.csv")
