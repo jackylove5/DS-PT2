@@ -15,8 +15,8 @@ It is envisaged that this collaboration will investigate the leveraging of Artif
 ![Architecture](https://github.com/jackylove5/DS-PT2/blob/main/doc/pipeline.png?raw=true)
 
 ## Tech Stack
-- requests and BeautifulSoup
-- fuzzywuzzy
-- pdf2image
-- paddleocr
-- tpot
+- Requests and BeautifulSoup
+- FuzzyWuzzy
+- Pdf2image
+- PaddleOCR
+- TPOT
