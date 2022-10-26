@@ -17,7 +17,7 @@ It is envisaged that this collaboration will investigate the leveraging of Artif
 - Downloader: downloading the articles locally.
 - Extractor: extracting tables from articles.
 - TableProcessor: cleaning data, merging tables and building model.
-
+- setting: setting keywords and parameters
 
 ## Requirement
 - Requests and BeautifulSoup
