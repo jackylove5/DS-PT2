@@ -15,7 +15,7 @@ import TableProcessor
 keywords = setting.keywords
 interested_parameters = setting.interested_parameters
 
-#getting download links
+#getting download links & checking relevance
 WebCrawler.get_url(keywords,interested_parameters)
 WebCrawler.check_relevance_advanced(keywords,interested_parameters)
 WebCrawler.remove_unrelated_articles()
@@ -23,10 +23,11 @@ WebCrawler.get_download_link(keywords)
 
 #downloading pdfs
 Downloader.download_pdf()
+
 #transforming pdfs into images
 Extractor.to_image()
 #extracting tables from images
 Extractor.to_table()
 
-#Table merging and TPOT
+#Table merging and AutoML framework: TPOT
 TableProcessor
