@@ -22,5 +22,6 @@ It is envisaged that this collaboration will investigate the leveraging of Artif
 - TPOT
 
 ## Usage
-.. code:: bash
+```bash
 python main.py
+```
