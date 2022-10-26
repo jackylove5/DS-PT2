@@ -17,6 +17,7 @@ import os
 import cv2
 from paddleocr import PPStructure,draw_structure_result,save_structure_res
 
+#transform pdf into image
 def to_image():
     file_path = os.listdir('./pdfs/')
     print("Transforming pdfs into images...")
@@ -49,6 +50,7 @@ def to_image():
         except:
             print("Error in performing the required action")
 
+#extracting tables from articles in images format
 def to_table():
     table_engine = PPStructure(show_log=False, use_gpu=False)
     file = os.listdir('./images')

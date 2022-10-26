@@ -54,7 +54,7 @@ def get_info(word, base, filt, num_page):
     result = pd.DataFrame({"URL":new_url, "doi": doi, "title":title})
     result.to_csv(word + ".csv", index = False)
 
-    
+#get url links of articles
 def get_url (keywords, interested_parameters):
     print("start searching for articles...")
     base = "https://pubmed.ncbi.nlm.nih.gov/?term="
@@ -69,6 +69,7 @@ def get_url (keywords, interested_parameters):
         get_info(word, base, filt, num_page)
         check_relevance(keywords, interested_parameters)
         
+#check relevance
 def check_relevance(keywords, interested_parameters):
     print("start checking relevance between articles and parameters...")
     for word in keywords:
@@ -147,12 +148,16 @@ def check_relevance_advanced(keywords,interested_parameters):
         relevanced.append(articles)
     relevanced = pd.concat([i for i in relevanced], axis = 0)
     relevanced.to_csv("relevanced.csv", index=None)
+
+#check the relevance table, if revelance==0, remove the article
 def remove_unrelated_articles():
     relevanced = pd.read_csv("relevanced.csv")
     relevanced = relevanced.loc[relevanced["tf"] != 0].reset_index(drop = True)
     relevanced.drop_duplicates(subset=["URL"], inplace=True, keep = "first")
     relevanced.to_csv("relevanced_tf.csv", index=None)
     return None
+
+#get download links using different methods based on DOI numbers
 def get_download_link(keywords):
     download_link = pd.DataFrame()
     f1 = pd.read_csv('relevanced_tf.csv')
@@ -213,6 +218,7 @@ def get_download_link(keywords):
     download_link.to_csv("download_link.csv",index = False)
     return None
 
+#doi:1155
 def doi_1155(f1):
     print("getting download link for doi 1155...")
     dlinklist = []
@@ -238,6 +244,7 @@ def doi_1155(f1):
     dlinkdf = pd.DataFrame({"title":title, "URL":dlinklist})
     return dlinkdf
     
+#doi:2147
 def doi_2147(f1):
     print("getting download link for doi 2147...")
     dlinklist = []
@@ -261,6 +268,7 @@ def doi_2147(f1):
     dlinkdf = pd.DataFrame({ "title":title, "URL":dlinklist})
     return dlinkdf
     
+#doi:3389
 def doi_3389(f1):
     print("getting download link for doi 3389...")
     dlinklist = []
@@ -284,6 +292,7 @@ def doi_3389(f1):
     dlinkdf = pd.DataFrame({ "title":title, "URL":dlinklist})
     return dlinkdf
     
+#doi:1002
 def doi_1002(f1):
     print("getting download link for doi 1002...")
     websites_1002 = []
@@ -304,6 +313,7 @@ def doi_1002(f1):
     dlinkdf = pd.DataFrame({ "title":title, "URL":websites_1002})
     return dlinkdf
     
+#doi:1007
 def doi_1007(f1):
     print("getting download link for doi 1007...")
     download_links_1007 = []
@@ -332,6 +342,7 @@ def doi_1007(f1):
     dlinkdf = pd.DataFrame({ "title":title, "URL":download_links_1007})
     return dlinkdf    
 
+#doi:1248
 def doi_1248(f1):
     print("getting download link for doi 1248...")
     dlinklist_1248 = []
@@ -354,6 +365,7 @@ def doi_1248(f1):
     dlinkdf = pd.DataFrame({ "title":title, "URL":dlinklist_1248})
     return dlinkdf
 
+#doi:1021
 def doi_1021(f1):
     print("getting download link for doi 1021...")
     websites_1021 = []
@@ -374,6 +386,7 @@ def doi_1021(f1):
     dlinkdf = pd.DataFrame({ "title":title, "URL":websites_1021})
     return dlinkdf
 
+#doi:1371
 def doi_1371(f1):
     websites_1371 = []
     title = []
@@ -393,6 +406,7 @@ def doi_1371(f1):
     dlinkdf = pd.DataFrame({ "title":title, "URL":websites_1371})
     return dlinkdf
 
+#doi:1038
 def doi_1038(f1):
     print("getting download link for doi 1038...")
     websites_1038 = []
@@ -416,6 +430,7 @@ def doi_1038(f1):
     dlinkdf = pd.DataFrame({ "title":title, "URL":websites_1038})
     return dlinkdf
 
+#doi:3390
 def doi_3390(f1):
     search_base = "https://www.ncbi.nlm.nih.gov/pmc/?term="
     download_base = "https://www.ncbi.nlm.nih.gov"

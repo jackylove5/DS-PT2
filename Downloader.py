@@ -31,6 +31,7 @@ def download_pdf(link_df):
                 continue
 '''
 #link_df = pd.read_csv("download_link.csv")
+#getting download links using webdriver
 def download_pdf():
     link_df = pd.read_csv("download_link.csv")
     option = webdriver.ChromeOptions()
