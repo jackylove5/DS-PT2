@@ -1,4 +1,4 @@
-# DS-PT2: The Application of Artificial Intelligence to Reduce the time to re--develop of on-market Drugs
+# DS-PT2: The Application of Artificial Intelligence to Reduce the time to redevelop of on-market Drugs
 
 ## Description
 
