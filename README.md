@@ -20,3 +20,7 @@ It is envisaged that this collaboration will investigate the leveraging of Artif
 - Pdf2image
 - PaddleOCR
 - TPOT
+
+## Usage
+.. code:: bash
+python main.py
