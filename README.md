@@ -11,3 +11,4 @@ Furthermore, literature searches can provide formulation data that can significa
 
 It is envisaged that this collaboration will investigate the leveraging of Artificial Intelligence in a commercially viable way. A review of existing Artificial Intelligence systems could be conducted to determine whether any platforms exist or could be extended, to allow for extraction of available data leading to faster development times in the re-formulation of on market drugs."
 
+## Architecture
